@@ -1,0 +1,11 @@
+// TODO - remove unncessary plugins
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.5.1")
+addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "1.0.0")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.7")
+addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.3.6")
+addSbtPlugin("de.heikoseeberger" % "sbt-header" % "5.0.0")
+addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.9")
+addSbtPlugin("com.typesafe.sbt" % "sbt-license-report" % "1.2.0")
+addSbtPlugin("com.lucidchart" % "sbt-scalafmt" % "1.15")
+addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.3.4")
