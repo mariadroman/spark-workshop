@@ -10,11 +10,19 @@ object Main {
 
     val config = ConfigFactory.load()
 
-    val spark = SparkSession.builder().appName("Test Application").getOrCreate()
+    val spark = SparkSession
+      .builder()
+      .master("local[2]")
+      .appName("Test Application")
+      .getOrCreate()
 
     import spark.implicits._
 
-    val data: DataFrame = spark.read.csv(config.getString("input.path"))
+    val data: DataFrame =
+      spark.read
+        .option("inferSchema", "true")
+        .csv(config.getString("input.path"))
+        .toDF("id", "value")
 
     val ds = data.as[Test]
 
